@@ -1,10 +1,18 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hHh lpR fFf" >
     <q-header reveal elevated>
-      <q-toolbar>
+      <q-toolbar style="background-color: #27ae60;">
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
 
-        <q-toolbar-title> Quasar App </q-toolbar-title>
+        <q-toolbar-title class="text-subtitle1 text-weight-regular">
+          TrackDocs
+
+            <div class="text-white text-caption text-weight-regular" style="margin-top: -4px">
+              Document Management & Tracking System
+            </div>
+
+        </q-toolbar-title>
+
 
         <div>
           <q-btn round flat>
@@ -45,10 +53,18 @@
 </template>
 
 <script>
+
+
 export default {
   name: 'MainLayout',
 
   components: {},
+
+  setup() {
+    return {
+
+    }
+  },
 
   data() {
     return {
