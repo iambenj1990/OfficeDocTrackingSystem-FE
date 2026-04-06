@@ -1,3 +1,5 @@
+
+
 const routes = [
   {
     path: '/',
@@ -6,6 +8,15 @@ const routes = [
       {
         path: '/',
         component: () => import('pages/Dashboard.vue'),
+      },
+       {
+        path: '/outgoing/new',
+        component: () => import('pages/OutGoing/NewDocument.vue'),
+      },
+       {
+        path: '/outgoing/list',
+        component: () => import('pages/OutGoing/OutGoingList.vue'),
+        name: 'outgoing-list',
       },
     ],
   },

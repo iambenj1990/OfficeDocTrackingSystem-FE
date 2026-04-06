@@ -75,8 +75,8 @@ export default defineConfig((/* ctx */) => {
     devServer: {
       // https: true,
       open: true, // opens browser window automatically
-      // host: '192.168.8.11',
-      host: '192.168.50.98',
+      host: '192.168.8.11',
+      // host: '192.168.50.98',
       port: 9000,
     },
 
