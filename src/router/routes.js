@@ -1,22 +1,34 @@
 
 
+
 const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
       {
-        path: '/',
-        component: () => import('pages/Dashboard.vue'),
+        path: '/admin/dashboard',
+        component: () => import('pages/DashboardOffice.vue'),
+        name: 'dashboard-office',
+      },
+       {
+        path: '/office/dashboard',
+        component: () => import('pages/DashboardOffice.vue'),
+        name: 'dashboard-office',
       },
        {
         path: '/outgoing/new',
         component: () => import('pages/OutGoing/NewDocument.vue'),
       },
        {
-        path: '/outgoing/list',
+        path: '/outgoing',
         component: () => import('pages/OutGoing/OutGoingList.vue'),
         name: 'outgoing-list',
+      },
+      {
+        path: '/incoming',
+        component: () => import('pages/InComing/IncomingList.vue'),
+        name: 'incoming-list',
       },
     ],
   },

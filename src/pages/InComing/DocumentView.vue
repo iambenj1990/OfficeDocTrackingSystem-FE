@@ -181,20 +181,6 @@
 
         <q-separator class="q-mb-md" />
 
-         <div class="section-label q-mb-sm">Document Attachments *</div>
-        <div class="row q-col-gutter-md q-mb-md">
-          <div class="col-12">
-            <q-uploader
-              url="https://httpbin.org/post"
-              label="Click or drag files here to upload"
-              multiple
-              :hide-upload-btn="true"
-              :hide-file-list="false"
-            />
-          </div>
-        </div>
-         <q-separator class="q-mb-md" />
-
         <!-- Actions -->
         <div class="row justify-end q-gutter-sm">
           <q-btn
@@ -203,12 +189,12 @@
             type="reset"
             color="grey-7"
           />
-          <!-- <q-btn
+          <q-btn
             outline
             label="Save as Draft"
             color="primary"
             @click="onSaveDraft"
-          /> -->
+          />
           <q-btn
             unelevated
             label="Submit Document"
@@ -223,19 +209,8 @@
 </template>
 
 <script>
-import { useDocumentStore } from 'src/stores/documentStore';
-
 export default {
-
   name: 'OutgoingDocumentForm',
-
-  setup () {
-    const documentStore = useDocumentStore();
-
-    return {
-      documentStore
-    }
-  },
 
   data () {
     return {
@@ -270,16 +245,11 @@ export default {
 
   methods: {
     onSubmit () {
-
-
-      
-      this.documentStore.NewDocument(this.form);
-
-      // this.$q.notify({
-      //   type: 'positive',
-      //   message: 'Document submitted successfully.',
-      //   position: 'top'
-      // })
+      this.$q.notify({
+        type: 'positive',
+        message: 'Document submitted successfully.',
+        position: 'top'
+      })
       console.log('Form data:', this.form)
     },
 

@@ -25,7 +25,7 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list class="q-mt-md">
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple @click="$router.push({ name: 'dashboard-office' })">
           <q-item-section avatar>
             <q-icon name="donut_small" size="35px" style="color: #8e44ad" />
           </q-item-section>
@@ -42,7 +42,7 @@
           </template>
 
           <q-list class="text-weight-regular text-subtitle2 q-pl-md">
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple @click="$router.push({name:'incoming-list'})">
               <q-item-section avatar>
                 <q-icon name="mark_email_unread" size="24px" color="red" />
               </q-item-section>
