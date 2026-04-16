@@ -4,13 +4,7 @@
     <!-- Header -->
     <div class="row items-center justify-between q-mb-md">
       <div class="text-h6">Incoming Documents</div>
-      <q-btn
-        unelevated
-        color="primary"
-        label="New Document"
-        icon="add"
-        @click="$router.push('/outgoing/new')"
-      />
+     
     </div>
 
     <!-- Table -->
